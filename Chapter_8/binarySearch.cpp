@@ -3,23 +3,22 @@
   the linear search. Its only requirement is that the values in the array be
   sorted in order.  Instead of testing the arrays first element, this algorithm
   starts with the element in the middle.  If that element happens to contain the
-  desired value, then the search is over.  Otherwise, the value in the middle
-  element is either greater thank or less than the value being searched for.
+  desired value, then the search is over. Otherwise, the value in the middle
+  element is either greater than or less than the value being searched for.
   If it is greater, then the desired value(if it is in the list) will be found
-  somewhere in the first half of the array.  If it is less, then the desired value
+  somewhere in the first half of the array. If it is less, then the desired value
   (again, if it is in the list) will be found somewhere in the last half of the
   array.  In either case, half of the arrays elements have been eliminated from
   further searching.
 
-  If the desiredvalue wasnt found in the middle element, the procedure is repeated
+  If the desired value wasnt found in the middle element, the procedure is repeated
   for the half of the array that potentially contains the value.  For instance,
   if the last half of the array is to be searched, the algorithm immediately tests
   its midle element.  If the desired value isnt found there, the search is narrowed
   to the quarter of the array that resides before or after the element.  This
   process continues until either the value being searched for is found or there
-  are no more elements to test.  
+  are no more elements to test.
 */
-
 
 #include <iostream>
 using namespace std;
@@ -56,6 +55,13 @@ int main()
   }
   return 0;
 }
+
+/*
+  The binarySearch functio performs a binary search on an integer array.
+  array, which has a maximum of size elements, is searched for the number
+  stored in value.  If the number is found, its array subscript is retured.
+  Otherwise, -1 is retured indicating the value was not in the array.
+*/
 
 int binarySearch(const int array[]), int size, int value)
 {
