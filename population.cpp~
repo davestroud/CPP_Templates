@@ -1,0 +1,30 @@
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+  // open the file
+  ofstream outputFile;
+  outputFile.open("People.txt");
+
+
+
+  // close the file
+  outputFile.close();
+  cout << "Done" << endl;
+
+  return 0;
+}
+
+/*  show the population growth of Prairievlille
+at 20 year intervals over the past 100 years. */
+
+
+// fetch data in People.txt file
+// read the population figures
+// round the population figures to nearest 1,000 people
+// program should read figures from 1900 to 2000 in 20 year increments
+// display the date and a bar consisting of one * for each 1000 people
+

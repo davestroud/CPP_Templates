@@ -1,0 +1,68 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+
+  int choice;
+  double quantity, cost;
+
+  const int UNIT_PRICE = 99;
+
+  const double TWENTY = .8,
+    THIRTY = .7,
+    FORTY = .6,
+    FIFTY = .5;
+
+    const int TWENTY_PERCENT = 1,
+      THIRTY_PERCENT = 2,
+      FORTY_PERCENT = 3,
+      FIFTY_PERCENT = 4,
+      QUIT_CHOICE = 5;
+    
+  // Display the quantity and number of units
+    cout << "\t\t Quantity \t" << endl;
+    cout << "----------------------------------------------------" << endl;
+  cout << "Enter 1. to purchase 10 -19 units; offered at a 20% discount.\t"  << endl;
+  cout << "Enter 2. to purchase 20-49 units; offered at a 30% discount. \t" << endl;
+  cout << "Enter 3. to purchase 50-99 units is offered at a 40% discount.\t" << endl;
+  cout << "Enter 4 \t 100 or more units is offered at a 50% discount.\t" << endl;
+  cout << "Enter your choice: ";  // if user doesnt enter 1 to 4 have them re-enter their choice.  this needs to be made to be more clear
+  cin >> choice;
+
+  switch (choice)
+  {
+  case TWENTY_PERCENT:
+      cout << "How many units are you purchasing" << endl;
+    cin >> quantity;
+    cost = quantity * TWENTY * UNIT_PRICE;
+    cout << "Your total cost is $" << cost << endl;
+    //  if number is not between 10 and 19, then tell user to enter another quantity
+    break;
+
+  case THIRTY_PERCENT:
+      cout << "How many units are you purchasing" << endl;
+    cin >> quantity;
+    cost = quantity * THIRTY * UNIT_PRICE;
+    cout << "Your total cost is $" << cost << endl;
+    break;
+
+  case FORTY_PERCENT:
+    cout << "How many units are you purchasing" << endl;
+    cin >> quantity;
+    cost = quantity * FORTY * UNIT_PRICE;
+    cout << "Your total cost is $" << cost << endl;
+    break;
+
+  case FIFTY_PERCENT:
+    cout << "How many units are you purchasing" << endl;
+    cin >> quantity;
+    cost = quantity * FIFTY * UNIT_PRICE;
+    cout << "Your total cost it $" << cost << endl;
+    break;
+  }
+  return 0;
+}
+
+
