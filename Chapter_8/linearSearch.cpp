@@ -1,5 +1,12 @@
-// This program demonstrates the searchList function, which
-// performs a linear search on a integer array.
+/*
+  The linear search is a very simple algorithm.  Sometimes called
+  a sequential search, it uses a loop to sequentially step through
+  an array, starting with the first element. It compares each element
+  with the value being searched for and stops when either the value is
+  found or the end of the array is encountered. If the value being searched
+  for it not in the array, the algorithm will unsuccessfully search to the end
+  of the array.
+*/
 
 #include <iostream>
 using namespace std;
