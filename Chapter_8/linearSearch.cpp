@@ -10,7 +10,7 @@ const int SIZE = 5;
 
 int main()
 {
-  int tests[SIZE] = {87, 75, 98, 100, 82};
+  int tests[SIZE] = {87, 75, 98, 10, 82};
   int results;
 
   // Search the array for 100
