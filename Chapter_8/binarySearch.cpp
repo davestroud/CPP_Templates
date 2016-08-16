@@ -25,19 +25,19 @@ using namespace std;
 
 // Function prototype
 int binarySearch(const int [], int, int);
-const in SIZE = 20;
+const int SIZE = 20;
 
 int main()
 {
   // Array with employee ID's in ascending order
-  int idNums[SIZE] {101, 142, 147, 189, 199, 207, 222,
-                    234, 289, 296, 310, 319, 388, 394,
-                    417, 429, 447, 521, 536, 600};
+  int idNums[SIZE] = {101, 142, 147, 189, 199, 207, 222,
+                      234, 289, 296, 310, 319, 388, 394,
+                      417, 429, 447, 521, 536, 600};
   int results;      // To hold the search results
   int empID;        // To hold and employee ID
 
   // Get an employee ID to search for
-  cout << "Enter the employee ID you wish to search for: "j
+  cout << "Enter the employee ID you wish to search for: ";
   cin >> empID;
 
   // Search for the ID
@@ -63,18 +63,26 @@ int main()
   Otherwise, -1 is retured indicating the value was not in the array.
 */
 
-int binarySearch(const int array[]), int size, int value)
+int binarySearch(const int array[], int size, int value)
 {
   int first = 0,        // First array element
-      last = size - 1   // Last array element
+      last = size - 1,   // Last array element
       middle,           // Midpoint of search
-      position = -1     // Position of search value
+      position = -1;     // Position of search value
   bool found = false;   // Flag
 
   while (!found && first <= last)
   {
       middle = (first + last) / 2;    // Calculate midpoint
       if (array[middle] == value)     // If value is found at mid
+      {
+        found = true;
+        position = middle;
+      }
+      else if (array[middle] > value) // If the value is in the lower half
+            last = middle = 1;
+      else
+            first = middle + 1;       // If the value is in the upper half
   }
-  return postion;
+  return position;
 }
