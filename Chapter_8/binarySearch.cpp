@@ -35,3 +35,19 @@ int main()
   }
   return 0;
 }
+
+int binarySearch(const int array[]), int size, int value)
+{
+  int first = 0,        // First array element
+      last = size - 1   // Last array element
+      middle,           // Midpoint of search
+      position = -1     // Position of search value
+  bool found = false;   // Flag
+
+  while (!found && first <= last)
+  {
+      middle = (first + last) / 2;    // Calculate midpoint
+      if (array[middle] == value)     // If value is found at mid
+  }
+  return postion;
+}
