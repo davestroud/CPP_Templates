@@ -11,28 +11,22 @@ int main()
           average;            // To hold average sales
   int numDays,                // To hold the number of days of sales
       count;                  // Counter variable
-          
+
 // Get the number of days of sales
-
-
-
-
+cout << "How many days of sales figures do you wish ";
+cout << "to process? ";
+cin >> numDays;
 
 // Dynamically allocate an array large enough
 // to hold that many days of sales amounts
-
-
-
-
-
+sales - new double[numDays];
 
 // Get the sales figures for each day
-
-
-
-
-
-
+cout << "Enter the sales figures below.\n";
+for (count = 0; count < numDays; count++)
+{
+  total += sales[count];
+}
 
 // Calculate the the total sales
 
