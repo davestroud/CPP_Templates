@@ -12,9 +12,10 @@ int main()
                     Since prt1 holds the address where the variable
                     one is stored, we say that prt1 'points to one'
                     */
-  cout << "The value of one is " << one << endl << endl;
-
-
+  cout << "The value of one is " << one << endl;
+  cout << "The value of &one is " << &one << endl;
+  cout << "The value of ptr1 is " << ptr1 << endl;
+  cout << "The value of *ptr1 is " << *ptr1 << endl;
 
   return 0;
 }
