@@ -15,13 +15,16 @@
 #include <iomanip>
 using namespace std;
 
+// function prototypes
+void sortIt(float* grades , int numGrades);
+
 int main()
 {
-  double *grades = nullptr,       // To dynamically allocate an array
-          total = 0.0,            // Accumlator
-          average;                // To hold the grade average
-  int numGrades,                  // To hold the number of grades
-      count;                      // Counter variable
+  float *grades = nullptr;        // To dynamically allocate an array
+  float total = 0.0;             // Accumlator
+  float average;                 // To hold the grade average
+  int numGrades;                  // To hold the number of grades
+  int count;                      // Counter variable
 
 
 // Get the number of test scores
@@ -37,11 +40,16 @@ while (numGrades <= 0) // checks for the legal value
 }
 
 // Do not accept a negative number for a test score
-
+grades = new float(numGrades);
+if (grades == NULL)
+{
+  cout << "Error allocating memory!\n";
+  return -1;
+}
 
 // Dynamically allocate an array large enough
 // to hold the test scores
-grades = new double[numGrades];
+grades = new float[numGrades];
 
 // Get the actual test scores
 cout << "Enter the test scores below.\n";
@@ -64,12 +72,32 @@ average = total / numGrades;
 cout << fixed << showpoint << setprecision(2);
 cout << "Average Grade: " << average <<endl;
 
+sortIt(grades, numGrades);
+for (count = 0; count < numGrades; count++){
+  cout<<"grade" <<(count+1)<<": " << grades[count] << endl;
+}
+
 
 // Free dynamically allocated memory
+sortIt(grades, numGrades);
 delete [] grades;
 grades = nullptr;     // Makes grades a null pointer
 
-
 return 0;
 
+}
+
+void sortIt(float * grades, int numGrades){
+  bool exchanges;
+  do{
+    exchanges = false;
+    for (int i = 0; i < numGrades -1; i++){
+      if (grades[i] > grades[i + i]){
+        float temp = grades[i];
+        grades[i] = grades[i+1];
+        grades[i+1] = temp;
+        exchanges = true;
+      }
+    }
+  }while(exchanges);
 }
