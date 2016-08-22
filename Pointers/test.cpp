@@ -25,11 +25,16 @@ int main()
 
 
 // Get the number of test scores
-cout << "How many test scores do you need to process? ";
+cout << "How many test scores will you enter? ";
 cin >> numGrades;
 
 // Do not accept a negative number of test scores
-
+while (numGrades <= 0) // checks for the legal value
+{
+  cout << "There must be at least one grade.  Please re-enter.\n";
+  cout << "How many grades will be processed? " << endl;
+  cin >> numGrades;
+}
 
 // Do not accept a negative number for a test score
 
@@ -42,7 +47,7 @@ grades = new double[numGrades];
 cout << "Enter the test scores below.\n";
 for (count = 0; count < numGrades; count++)
 {
-  cout << "Grade" << (count + 1) << ":";
+  cout << "Grade " << (count + 1) << ": ";
   cin >> grades[count];
 }
 
