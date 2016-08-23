@@ -9,7 +9,8 @@ void displayGrades(float* grades, int numGrades);
 int main()
 {
   float* grades = nullptr;      // To dynamically allocate an array
-  float numGrades;              // To hold the number of grades
+  float total = 0;              // Total of all grades
+  float average;                // Average of all grades
   int numGrades;                // The number of grades to be processed
   int count;                    // Loop counter
 
@@ -21,7 +22,7 @@ cout << "How many test scores will you enter? " << endl;
 cin >> numGrades;
 
 // Check for a legal value of grades
-while (numGrades < = 0)
+while (numGrades <= 0)
 {
   cout << "Your number cannnot be negative.\n";
   cout << "Enter another number: " << endl;
@@ -39,7 +40,7 @@ while (numGrades < = 0)
 
 // Dynamically allocate an array large enough
 // to hold the test scores
-grades = new float[numGrades];  // Allocation memory for array 
+grades = new float[numGrades];  // Allocation memory for array
 if (grades == NULL)
 {
   cout << "Error allocating memory!\n";
@@ -48,10 +49,12 @@ if (grades == NULL)
 
 // Get the test scores
 cout <<  "Enter the grades below\n";
-
-
-
-
+for (count = 0; count < numGrades; count++)
+{
+  cout << "Grade" << (count + 1) << ": " << endl;
+  cin >> grades[count];
+  total = total + grades[count];
+}
 
 
 // Calculate the total scores
@@ -62,7 +65,8 @@ cout <<  "Enter the grades below\n";
 
 // Calculate the average score
 
-
+average = total / numGrades;
+cout << "Average score: " << average << "%" << endl;
 
 
 
