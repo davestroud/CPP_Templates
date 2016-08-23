@@ -14,10 +14,8 @@ int main()
   int numGrades;                // The number of grades to be processed
   int count;                    // Loop counter
 
-
 // Get the number of test scores
 cout << fixed << showpoint << setprecision(2);
-
 cout << "How many test scores will you enter? " << endl;
 cin >> numGrades;
 
@@ -29,12 +27,7 @@ while (numGrades <= 0)
   cin >> numGrades;
 }
 
-
-
 // Do not accept a negative number for a test score
-
-
-
 
 
 
@@ -57,22 +50,10 @@ for (count = 0; count < numGrades; count++)
 }
 
 
-// Calculate the total scores
-
-
-
-
-
 // Calculate the average score
 
 average = total / numGrades;
 cout << "Average score: " << average << "%" << endl;
-
-
-
-// Display the results
-
-
 
 
 // Free dynamically allocated memory
@@ -80,13 +61,15 @@ delete [] grades;
 grades = nullptr;   // Makes grades a null pointer
 
 return 0;
-
-
 }
 // Sorting algorithm to sort numbers in an array
+void sortIt(float* grades, int numGrades)
+{
 
-
-
-
+}
 
 // Display grades
+void displayGrades(float* grades, int numGrades)
+{
+
+}
