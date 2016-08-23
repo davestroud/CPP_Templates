@@ -27,10 +27,6 @@ while (numGrades <= 0)
   cin >> numGrades;
 }
 
-// Do not accept a negative number for a test score
-
-
-
 // Dynamically allocate an array large enough
 // to hold the test scores
 grades = new float[numGrades];  // Allocation memory for array
@@ -49,17 +45,14 @@ for (count = 0; count < numGrades; count++)
   total = total + grades[count];
 }
 
-
-// Calculate the average score
-average = total / numGrades;
-cout << "Average score: " << average << "%" << endl;
-
 // Call sorting algorithm
 sortIt(grades,numGrades);
-cout << "Here are the scores in ascending order" << endl;
-for (int count1 = 0;  count1 < numGrades;  count1++)
+displayGrades(grades, numGrades);
 
-   cout << grades[count1] << endl;
+   // Calculate the average score
+   average = total / numGrades;
+   cout << "Average score: " << average << "%" << endl;
+
 
 // Free dynamically allocated memory
 delete [] grades;
@@ -92,5 +85,7 @@ void sortIt(float * grades, int size)
 // Display grades
 void displayGrades(float* grades, int numGrades)
 {
-
+  cout << "The test scores in ascending order, and their average, are: " << endl;
+  for (int count1 = 0;  count1 < numGrades;  count1++)
+  cout << grades[count1] << endl;
 }
