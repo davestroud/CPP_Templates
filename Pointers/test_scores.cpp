@@ -51,10 +51,15 @@ for (count = 0; count < numGrades; count++)
 
 
 // Calculate the average score
-
 average = total / numGrades;
 cout << "Average score: " << average << "%" << endl;
 
+// Call sorting algorithm
+sortIt(grades,numGrades);
+cout << "Here are the scores in ascending order" << endl;
+for (int count1 = 0;  count1 < numGrades;  count1++)
+
+   cout << grades[count1] << endl;
 
 // Free dynamically allocated memory
 delete [] grades;
@@ -62,10 +67,26 @@ grades = nullptr;   // Makes grades a null pointer
 
 return 0;
 }
-// Sorting algorithm to sort numbers in an array
-void sortIt(float* grades, int numGrades)
-{
 
+// Sorting algorithm to sort numbers in an array
+void sortIt(float * grades, int size)
+{
+	int swap_occured = 1;
+	int bottom = size-1;
+    float temp;
+	while (swap_occured)
+    {
+	  swap_occured = 0;
+	  for (int pos = 0;  pos < bottom; pos++)
+		if (grades[pos] > grades[pos + 1])
+		{
+			temp = grades[pos];
+			grades[pos] = grades[pos + 1];
+			grades[pos + 1] = temp;
+			swap_occured = 1;
+		}
+		bottom--;
+	}
 }
 
 // Display grades
