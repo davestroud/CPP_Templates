@@ -1,6 +1,12 @@
 // This program tests two C-strings for equality
 // using the strcmp function
 
+
+/*
+  32. Assume that str1 and str2 are string class objects.  Write code that
+      displays "They are the same!" if the two objects contain the same string.
+*/
+
 #include <iostream>
 #include <cstring>
 
