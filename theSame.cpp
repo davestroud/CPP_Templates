@@ -1,3 +1,6 @@
+// This program tests two C-strings for equality
+// using the strcmp function
+
 #include <iostream>
 #include <cstring>
 
@@ -6,6 +9,7 @@ using namespace std;
 int main()
 
 {
+  // Two arrays for two strings
   char str1[25];
   char str2[25];
 
@@ -14,18 +18,11 @@ int main()
   cout << "Please enter the second name" << endl;
   cin.getline(str2,25);
 
-  cout << endl << "The names are as follows: " << endl;
-
-  if (strcmp(str1,str2) == 0)
-  {
-    cout << str1 << endl << str2 << endl;
-    cout << "They are the same!" << endl;
-  }
-  else if (strcmp(str1, str2) < 0)
-    cout << str1 << endl << str2 << endl;
-
-  else
-    cout << str2 << endl << str1 << endl;
+// Compare the strings for equality with strcmp
+if (strcmp(str1, str2) == 0)
+  cout << "They are the same:\n";
+else
+  cout << "They are not the same:\n";
 
   return 0;
 }
