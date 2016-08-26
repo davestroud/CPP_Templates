@@ -27,7 +27,10 @@ int main()
     cout << "The password is valid" << endl;
   else
   {
-    cout << "The password is not valid.";
+    cout << "The password is not valid.\n";
+    cout << "The password must be 6 or more characters long.\n";
+    cout << "The password must have:\n";
+    cout << "\tat least one uppercase character" << endl;
   }
 
   cout << endl << "Press any key to continue ..." <<endl;
