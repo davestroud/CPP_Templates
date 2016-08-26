@@ -6,7 +6,7 @@
 using namespace std;
 
 // function prototypes
-bool testPassWord(char[]);
+bool verifyPassWord(char[]);
 int countLetters(char*);
 int countDigits(char*);
 
@@ -23,7 +23,7 @@ int main()
         << "Enter a password: " << endl;
   cin.getline(passWord, 20);
 
-  if (verifyPassword(password))
+  if (verifyPassWord(passWord))
     cout << "The password is valid" << endl;
 
   return 0;
@@ -34,7 +34,7 @@ int main()
 // Password must have at least one uppercase character
 // Password must have at lease one lowercase character
 // Password must have at least one numeric digit
-bool testPassWord(char custPass[])
+bool verifyPassWord(char custPass[])
 {
   int numLetters, numDigits, length;
 
