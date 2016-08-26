@@ -25,6 +25,13 @@ int main()
 
   if (verifyPassWord(passWord))
     cout << "The password is valid" << endl;
+  else
+  {
+    cout << "The password is not valid.";
+  }
+
+  cout << endl << "Press any key to continue ..." <<endl;
+  getchar();
 
   return 0;
 }
@@ -41,7 +48,7 @@ bool verifyPassWord(char custPass[])
   length = strlen(custPass);
   numLetters = countLetters(custPass);
   numDigits = countDigits(custPass);
-  if (numLetters < 6 && numDigits == 1)
+  if (numLetters > 6 && numDigits == 1)
     return true;
   else
     return false;
