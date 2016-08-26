@@ -47,5 +47,36 @@ bool verifyPassWord(char custPass[])
     return false;
 }
 
+// counts the number of letters, both capital and lowercase in the string
+int countLetters(char *strPtr)
+{
+  int occurs = 0;
+
+  while(*strPtr != '\0')
+  {
+    if (isalpha(*strPtr))
+      occurs++;
+    strPtr++;
+  }
+  return occurs;
+}
+
+// counts the number of digits in the string
+int countDigits(char *strPtr)
+{
+  int occurs = 0;
+
+  while(*strPtr != '\0')
+  {
+    if (isdigit(*strPtr))
+      occurs++;
+    strPtr++;
+  }
+  return occurs;
+}
+
+
+
+
 
 // Press any key to continue
