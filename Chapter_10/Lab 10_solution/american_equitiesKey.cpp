@@ -7,18 +7,18 @@
 #include <cctype>
 #include <cstring>
 
-using namespace std; 
+using namespace std;
 
-//function prototypes 
+//function prototypes
 
-bool testPassWord(char[]);  
+bool testPassWord(char[]);
 int countLetters(char*);
 int countDigits(char*);
 
 int main()
 {
-	char passWord[20];  
-	
+	char passWord[20];
+
 	cout << "Enter a password consisting of exactly 5 "
 		 << "letters and 3 digits:" << endl;
 	cin.getline(passWord,20);
@@ -34,7 +34,7 @@ int main()
 
 
 	cout << "The number of letters in the password is " << countLetters(passWord) << endl;
-	cout << "The number of digits in the password is " << countDigits(passWord) << endl; 
+	cout << "The number of digits in the password is " << countDigits(passWord) << endl;
 
 	return 0;
 }
@@ -71,18 +71,18 @@ bool testPassWord(char custPass[])
 //
 // task:			counts the number of letters (both
 //                  capital and lower case in the string
-// data in:			a string 
+// data in:			a string
 // data returned:   the number of letters in the string
 //
 //**************************************************************
-int countLetters(char *strPtr) 
+int countLetters(char *strPtr)
 {
 	int occurs = 0;
 
-	while(*strPtr != '\0')       
+	while(*strPtr != '\0')
 
 	{
-		if (isalpha(*strPtr))  
+		if (isalpha(*strPtr))
 			occurs++;
 		strPtr++;
 	}
@@ -94,13 +94,13 @@ int countLetters(char *strPtr)
 //                       countDigits
 //
 // task:			counts the number of digitts in the string
-// data in:			a string 
+// data in:			a string
 // data returned:   the number of digits in the string
 //
 //**************************************************************
 int countDigits(char *strPtr)  // this function counts the
                                // number of digits
-{  
+{
 	int occurs = 0;
 
 	while(*strPtr != '\0')

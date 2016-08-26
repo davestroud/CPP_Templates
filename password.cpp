@@ -1,3 +1,12 @@
+#include <iostream>
+#include <cctype>
+#include <cstdio> // For the get the C getchar()function
+#include <cstring>
+
+using namespace std;
+
+
+
 // Enter a password
 
 
@@ -17,3 +26,6 @@
 
 
 // Your password is not valid
+
+
+// Press any key to continue
