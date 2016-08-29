@@ -1,3 +1,16 @@
+// John David Stroud
+// CS2255 Computer Science II
+// david@davidstroud.me
+// https://github.com/davestroud
+
+// Homework #2 - Password Verifier
+
+/* Password must have at least 6 characters
+** Password must have at least one uppercase character
+** Password must have at lease one lowercase character
+** Password must have at least one numeric digit
+*/
+
 #include <iostream>
 #include <cctype>
 #include <cstdio> // For the get the C getchar()function
@@ -40,10 +53,6 @@ int main()
 }
 
 
-// Password must have at least 6 characters
-// Password must have at least one uppercase character
-// Password must have at lease one lowercase character
-// Password must have at least one numeric digit
 bool verifyPassWord(char custPass[])
 {
   int numLetters, numDigits, length;
@@ -84,9 +93,3 @@ int countDigits(char *strPtr)
   }
   return occurs;
 }
-
-
-
-
-
-// Press any key to continue
