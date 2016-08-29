@@ -60,7 +60,7 @@ bool verifyPassWord(char custPass[])
   length = strlen(custPass);
   numLetters = countLetters(custPass);
   numDigits = countDigits(custPass);
-  if (numLetters > 6 && numDigits == 1)
+  if (numLetters > 5 && numDigits > 1)
     return true;
   else
     return false;
