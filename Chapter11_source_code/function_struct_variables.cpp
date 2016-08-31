@@ -1,6 +1,30 @@
 // This program has functions that accept structure variables
 // as arguments
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
 
+struct InventoryItem
+{
+  int partNum;            // Part number
+  string description      // Item description
+  int onHand;             // Units on hand
+  double price;           // Unit price
+};
+
+// Function Prototypes
+void getItem(InventoryItem&);     // Argument passed by reference
+void showItem(InventoryItem);     // Argument passed by value
+
+int main()
+{
+  InventoryItem part;
+
+  getItem(part);
+  showItem(part);
+  return 0;
+}
 
 //************************************************************
 // Definition of function getItem.  This function uses       *
