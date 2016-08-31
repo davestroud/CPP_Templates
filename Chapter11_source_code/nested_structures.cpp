@@ -42,14 +42,22 @@ int main()
 
   // Get the manager's birth date
   cout << "Now enter the manager's data of birth:\n";
-  coutt << "Month (up to 2 digits): ";
+  cout << "Month (up to 2 digits): ";
   cin >> manager.birthDate.day;
   cout << "Year: ";
   cin >> manager.birthDate.year;
   cin.ignore();   // Skip the remaining newline character
 
-
   // Get the manager's residence information
+  cout << "Enter the manager's street address: ";
+  getline(cin, manager.residence.address);
+  cout << "City: ";
+  getline(cin, manager.residence.city);
+  cout << "State: ";
+  getline(cin, manager.residence.state);
+  cout << "ZIP Code: ";
+  getline(cin, manager.residence.zip);
+
 
 
   //Display the information just entered
