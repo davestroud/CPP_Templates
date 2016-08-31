@@ -28,3 +28,27 @@ struct EmployeeInfo
   Date birthDate;           // Nested structure
   Place residence;          // Nested structure
 };
+
+int main()
+{
+  // Define a structure variable to hold info about the manager
+
+
+  // Get the manangers name and employee number
+
+
+  // Get the manager's birth date
+
+
+  // Get the manager's residence information
+
+
+  Display the information just entered
+
+
+
+
+
+  return 0;
+
+}
