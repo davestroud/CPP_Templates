@@ -32,18 +32,27 @@ struct EmployeeInfo
 int main()
 {
   // Define a structure variable to hold info about the manager
-
+  EmployeeInfo manager;
 
   // Get the manangers name and employee number
-
+  cout << "Enter the manager's name: ";
+  getline(cin, manager.name);
+  cout << "Enter the manager's employee number: ";
+  cin >> manager.employeeNumber;
 
   // Get the manager's birth date
+  cout << "Now enter the manager's data of birth:\n";
+  coutt << "Month (up to 2 digits): ";
+  cin >> manager.birthDate.day;
+  cout << "Year: ";
+  cin >> manager.birthDate.year;
+  cin.ignore();   // Skip the remaining newline character
 
 
   // Get the manager's residence information
 
 
-  Display the information just entered
+  //Display the information just entered
 
 
 
