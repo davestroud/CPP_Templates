@@ -41,8 +41,10 @@ int main()
   cin >> manager.employeeNumber;
 
   // Get the manager's birth date
-  cout << "Now enter the manager's data of birth:\n";
+  cout << "Now enter the manager's date of birth:\n";
   cout << "Month (up to 2 digits): ";
+  cin >> manager.birthDate.month;
+  cout << "Day (up to 2 digits): ";
   cin >> manager.birthDate.day;
   cout << "Year: ";
   cin >> manager.birthDate.year;
@@ -58,14 +60,19 @@ int main()
   cout << "ZIP Code: ";
   getline(cin, manager.residence.zip);
 
-
-
   //Display the information just entered
-
-
-
-
-
+  cout << "\nHere is the manager's information:\n";
+  cout << manager.name << endl;
+  cout << "Employee number " << manager.employeeNumber << endl;
+  cout << "Date of birth ";
+  cout << manager.birthDate.month << "-";
+  cout << manager.birthDate.day << "-";
+  cout << manager.birthDate.year << endl;
+  cout << "Place of residence: \n";
+  cout << manager.residence.address << endl;
+  cout << manager.residence.city << ", ";
+  cout << manager.residence.state << " ";
+  cout << manager.residence.zip << endl;
   return 0;
 
 }
