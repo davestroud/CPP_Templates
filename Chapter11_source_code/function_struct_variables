@@ -1,0 +1,18 @@
+// This program has functions that accept structure variables
+// as arguments
+
+
+//************************************************************
+// Definition of function getItem.  This function uses       *
+// a structure reference variable as its parameter. It asks  *
+// the user for information to store in its structure        *
+//************************************************************
+
+
+
+
+//***********************************************************
+//Definition of function showItem.  This function accepts   *
+//an argument of the InventoryItem structure type.  The     *
+// contents of the structure is displayed.                  *
+//************************************************************
