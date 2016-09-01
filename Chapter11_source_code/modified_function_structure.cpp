@@ -2,7 +2,7 @@
 // is a modification of circle_struct.cpp
 #include <iostream>
 #include <iomanip>
-#include <math>   // For the pow function
+#include <cmath>   // For the pow function
 using namespace std;
 
 //Constant for Pi
@@ -35,7 +35,6 @@ int main()
   return 0;
 }
 
-
 //*****************************************************************
 // Definition of function getInfo.  This function uses a local    *
 // variable, tempCircle, which is a circle structure.  The user   *
@@ -44,3 +43,16 @@ int main()
 // which is stored in tempCircle.radius. tempCircle is then       *
 // return from the function.                                      *
 //*****************************************************************
+
+Circle getInfo()
+{
+  Circle tempCircle;      // Temporary structure variable
+
+  // Store circle data in the temporary variable
+  cout << "Enter the diameter of a circle: ";
+  cin >> tempCircle.diameter;
+  tempCircle.radius = tempCircle.diameter / 2.0;
+
+  // Return the temporary variable
+  return tempCircle;
+}
