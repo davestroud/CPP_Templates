@@ -1,5 +1,9 @@
 // This program demonstrates a function that uses a
 // pointer to a structure variable as a parameter
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
 
 // Build struct
 struct Student
@@ -8,7 +12,7 @@ struct Student
   int idNum;              // Student ID number
   int creditHours;        // Credit hours enrolled
   double gpa;             // Current GPA
-}
+};
 
 void getData(Student *);    // Function prototype
 
@@ -17,7 +21,7 @@ int main()
   Student freshman;
 
   // Get the student data
-  cout << "Enter the folowing student data:\n";
+  cout << "Enter the following student data:\n";
   getData(&freshman);       // Pass the address of freshman
   cout << "\nHere is the student data you entered:\n";
 
@@ -35,3 +39,22 @@ int main()
 // Student structure variable. The user enters student      *
 // information, which is stored in the variable.            *
 //***********************************************************
+
+void getData(Student *s)
+{
+  // Get the student name
+  cout << "Student name: ";
+  getline(cin, s->name);
+
+  // Get the student ID number
+  cout << "Student ID Number: ";
+  cin >> s->idNum;
+
+  // Get the credit hours enrolled
+  cout << "Credit Hours: ";
+  cin >> s->creditHours;
+
+  // Get the GPA
+  cout << "GPA: ";
+  cin >> s->gpa;
+}
