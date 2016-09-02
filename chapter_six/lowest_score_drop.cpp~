@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+
+// Function Prototypes
+void getScore(int, int, int, int, int);
+void calcAverage();
+int findLowest();
+
+int main()
+{
+  int value1, value2, value3, value4, value5;
+  
+  cout << " Enter the five scores: "
+  getScore(int value1, int value2, int value3, int value4, int value5);
+  cin >> value1 >> value2 >> value3 >> value4 >> value5;
+  
+  calcAverage();
+
+  return 0;
+}
+
+void getScore(int num1, int num2, int num3, int num4, int num5)
+{
+  cout << (num1, num2, num3, num4, num5) << endl;
+}
+
+void calcAverage()
+{
+  // calculate and display avg of 4 highest scores
+  findLowest(); // determines which score to drop
+}
+
+int findLowest()
+{
+  // find and return lowest of 5 scores passed to it
+}
+
+
+// Input Validation: Do not accept test scores lower than
+// 0 or higher than 100
