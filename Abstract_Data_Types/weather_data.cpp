@@ -1,10 +1,18 @@
-// Write a program that uses structure to store the following weather data
+// Write a program that uses a structure to store the following weather data
 // for a particular month:
 
-// Total Rainfall
-// High Temperature
-// Low Temperature
-// Average Temperature
+//******************************************************************************
+// The program should also calculate the following:                            *
+//      Average monthly rainfall                                               *
+//      Total Rainfall for the year                                            *
+//      Highest Temperature, and the month it occured                          *
+//      Lowest Temperature, and the month it occured                           *
+//      Average Temperature of all the montly average temperatures             *
+// Input Validation: Only accept temperatures within the range between -100    *
+// and +140 degrees Fahrenheit                                                 *
+// *****************************************************************************
+#include <iostream>
+using namespace std;
 
 // Build struct
 struct WeatherData
@@ -34,7 +42,7 @@ int main()
   int highestMonth;       // The month with the highest temp
   int lowestMonth;        // The month with the lowest tmep
 
-  // Get the weather data for each month
+  // Get the weather data for each month by using a for loop
   cout << "Enter the following information:\n";
   for (int index = 0; index < NUM_MONTHS; index++)
   {
@@ -50,5 +58,11 @@ int main()
   // Display the average monthly Rainfall
   cout << "Average Monthly Rain: "
         << averageMonthlyRainfall(year, NUM_MONTHS)
+        << endl;
+
+  // Display the avereage of the monthly average temperatures.
+  cout << "Average Monthly Average Temperature: "
+        << averageAverageTemp(year, NUM_MONTHS)
+        << endl;
 
 }
