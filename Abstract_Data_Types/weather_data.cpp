@@ -117,3 +117,32 @@ void getMonthData(WeatherData &data)
   // Calculate the average temperature.
   data.averageTemp = (data.high + data.low) / 2.0;
 }
+
+// The totalRain function accepts an array of WeatherData
+// structures and returns the total of all the element's
+// rain members.
+
+double totalRain(WeatherData data[], int size)
+{
+  double totalRain = 0;     // Accumulator
+
+  // Get the total of the rain memebers
+  for (int index = 0; index < size; index++)
+      totalRain += data[index].rain;
+
+      // Return the total
+      return totalRain;
+}
+
+// The averageMonthlyRainfall function accepts an array
+// of WeatherData structures and returns the aveage
+// monthly rainfall.
+
+double averageMonthlyRainfall(WeatherData[], int size)
+{
+  // The average is the total amount of rain divided by
+  // the amount of months.
+  return totalRain(data, size) / size;
+}
+
+// The averageAverageTemp function accepts
