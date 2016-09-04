@@ -68,12 +68,12 @@ int main()
   // Display the highest temperature and the month it occured in.
   double highest = highestTemp(year, NUM_MONTHS, highestMonth);
   cout << "Highest Temperature: " << highest;
-  cout << "   (Month ") << highestMonth << ")\n\n"
+  cout << "   (Month " << highestMonth << ")\n\n";
 
   // Display the lowest temperature and the month it occured in.
   double lowest = lowestTemp(year, NUM_MONTHS, lowestMonth);
   cout << "Lowest Temperature: " << lowest;
-  cout << "    (Month ") << lowestMonth << ")\n\n"
+  cout << "    (Month " << lowestMonth << ")\n\n";
 
   return 0;
 }
@@ -89,27 +89,27 @@ void getMonthData(WeatherData &data)
   cin >> data.rain;
 
   // Get the high temperature.
-  cout << "\tHigh temperature: "
+  cout << "\tHigh temperature: ";
   cin >> data.high;
 
   // Validate the temperature
   while (data.high < -100 || data.low > 140)
   {
       cout << "ERROR: Temperature must be in the range "
-            << "of -100 through 140.\n"
+            << "of -100 through 140.\n";
       cout << "\tHigh Temperature: ";
       cin >> data.high;
   }
 
   // Get the low temperature
-  cout << "\tLow Temperature: "
+  cout << "\tLow Temperature: ";
   cin >> data.low;
 
   // Validate the low temperature.
   while (data.high < -100 || data.low > 140)
   {
     cout << "ERROR: Temperature must be in the range "
-          << "of -100 through 140.\n"
+          << "of -100 through 140.\n";
     cout << "\tLow Temperature: ";
     cin >> data.low;
   }
@@ -180,7 +180,7 @@ double averageAverageTemp(WeatherData data[], int size)
 double highestTemp(WeatherData data[], int size, int &month)
 {
   // Set the highest to the first month.
-  double higest = data[0].high;
+  double highest = data[0].high;
 
   // Step through the array looking for the highest
   for (int index = 1; index < size; index++)
