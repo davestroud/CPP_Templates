@@ -14,7 +14,7 @@
 #include <iostream>
 using namespace std;
 
-// Build struct
+// Declare struct
 struct WeatherData
 {
   double rain;          // Total Rainfall
@@ -60,9 +60,20 @@ int main()
         << averageMonthlyRainfall(year, NUM_MONTHS)
         << endl;
 
-  // Display the avereage of the monthly average temperatures.
+  // Display the average of the monthly average temperatures.
   cout << "Average Monthly Average Temperature: "
         << averageAverageTemp(year, NUM_MONTHS)
         << endl;
 
+  // Display the highest temperature and the month it occured in.
+  double highest = highestTemp(year, NUM_MONTHS, highestMonth);
+  cout << "Highest Temperature: " << highest;
+  cout << "   (Month ") << highestMonth << ")\n\n"
+
+  // Display the lowest temperature and the month it occured in.
+  double lowest = lowestTemp(year, NUM_MONTHS, lowestMonth);
+  cout << "Lowest Temperature: " << lowest;
+  cout << "    (Month ") << lowestMonth <<")\n\n"
+
+  return 0;
 }
