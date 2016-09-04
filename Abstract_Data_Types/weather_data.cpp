@@ -14,3 +14,11 @@ struct WeatherData
   double low;           // Low Temperature
   double averageTemp;   // Average Temperature
 };
+
+// Function Prototypes
+void getMonthData(WeatherData &);
+double totalRain(WeatherData[], int);
+double averageMonthlyRainfall(WeatherData[], int);
+double averageAverageTemp(WeatherData{}, int);
+double highestTemp(WeatherData[], int, int &);
+double lowestTemp(WeatherData[], int, int &);
