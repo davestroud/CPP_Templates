@@ -138,7 +138,7 @@ double totalRain(WeatherData data[], int size)
 // of WeatherData structures and returns the aveage
 // monthly rainfall.
 
-double averageMonthlyRainfall(WeatherData[], int size)
+double averageMonthlyRainfall(WeatherData data[], int size)
 {
   // The average is the total amount of rain divided by
   // the amount of months.
@@ -174,6 +174,9 @@ double averageAverageTemp(WeatherData data[], int size)
 // The function return the highest temperature and sets the
 // month parameter to the number of the month and the highest temp.
 
+      // Logic of this function is covered in Chapter 7.
+      // Finding the highest/lowest value in an array.
+
 double highestTemp(WeatherData data[], int size, int &month)
 {
   // Set the highest to the first month.
@@ -192,6 +195,35 @@ double highestTemp(WeatherData data[], int size, int &month)
     }
   }
 
-  // Return the higest temperatur
+  // Return the higest temperature
   return highest;
+}
+
+// The lowestTemp function accpets:
+//  1. a WeatherData array
+//  2. an int indicating the size of the array
+//  3. an int by reference to hold the month with the
+//     lowest temperature
+// The function return the lowest temperature and sets the
+// month parameter to the number of the month and the lowest temp.
+
+double lowestTemp(WeatherData data[], int size, int &month)
+{
+  // Set the lowest to the first month.
+  double lowest = data[0].low;
+
+  // Step through the array looking for the lowest
+  for (int index = 1; index < size; index++)
+  {
+    if (data[index].low < lowest)
+    {
+      // Save this value. It is the lowest so far
+      lowest = data[index].low;
+
+      // Save the month's number. (1 = Jan, etc)
+      month = index + 1;
+    }
+  }
+  // Return the lowest temperature
+  return lowest;
 }
