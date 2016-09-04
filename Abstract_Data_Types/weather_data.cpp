@@ -73,7 +73,47 @@ int main()
   // Display the lowest temperature and the month it occured in.
   double lowest = lowestTemp(year, NUM_MONTHS, lowestMonth);
   cout << "Lowest Temperature: " << lowest;
-  cout << "    (Month ") << lowestMonth <<")\n\n"
+  cout << "    (Month ") << lowestMonth << ")\n\n"
 
   return 0;
+}
+
+// The getMonthData function accepts a WeatherData
+// variable by reference.  It prompts the user for
+// weather data and stores the input in the arguement
+
+void getMonthData(WeatherData &data)
+{
+  // Get the total rainfall for the month.
+  cout << "\tTotal Rainfall: ";
+  cin >> data.rain;
+
+  // Get the high temperature.
+  cout << "\tHigh temperature: "
+  cin >> data.high;
+
+  // Validate the temperature
+  while (data.high < -100 || data.low > 140)
+  {
+      cout << "ERROR: Temperature must be in the range "
+            << "of -100 through 140.\n"
+      cout << "\tHigh Temperature: ";
+      cin >> data.high;
+  }
+
+  // Get the low temperature
+  cout << "\tLow Temperature: "
+  cin >> data.low;
+
+  // Validate the low temperature.
+  while (data.high < -100 || data.low > 140)
+  {
+    cout << "ERROR: Temperature must be in the range "
+          << "of -100 through 140.\n"
+    cout << "\tLow Temperature: ";
+    cin >> data.low;
+  }
+
+  // Calculate the average temperature.
+  data.averageTemp = (data.high + data.low) / 2.0;
 }
