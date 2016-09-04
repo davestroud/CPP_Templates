@@ -145,4 +145,23 @@ double averageMonthlyRainfall(WeatherData[], int size)
   return totalRain(data, size) / size;
 }
 
-// The averageAverageTemp function accepts
+// The averageAverageTemp function accepts an array of
+// WeatherData structures and returns the average of all
+// the monthly temperatures.
+
+double averageAverageTemp(WeatherData data[], int size)
+{
+  // Calculate the average monthly aveage temperature
+  double aveTotal = 0;      // Accumulator for average temperatures
+  double aveAve;            // Average of the averages
+
+  // Get the total of the average temperatures.
+  for (int index = 1; index < size; index++)
+      aveTotal += data[index].averageTemp;
+
+  // Calculate the average of the average temperatures.
+  aveAve = aveTotal / size;
+
+  // Return the average of the averages.
+  return aveAve;
+}
