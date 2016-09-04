@@ -165,3 +165,33 @@ double averageAverageTemp(WeatherData data[], int size)
   // Return the average of the averages.
   return aveAve;
 }
+
+// The highestTemp function accpets:
+//  1. a WeatherData array
+//  2. an int indicating the size of the array
+//  3. an int by reference to hold the month with the
+//     highest temperature
+// The function return the highest temperature and sets the
+// month parameter to the number of the month and the highest temp.
+
+double highestTemp(WeatherData data[], int size, int &month)
+{
+  // Set the highest to the first month.
+  double higest = data[0].high;
+
+  // Step through the array looking for the highest
+  for (int index = 1; index < size; index++)
+  {
+    if (data[index].high > highest)
+    {
+      // Save this value. It is the highest so far.
+      highest = data[index].high;
+
+      // Save the month's number. (1 = Jan, etc)
+      month = index + 1;
+    }
+  }
+
+  // Return the higest temperatur
+  return highest;
+}
