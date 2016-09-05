@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
 
   cout << "Opening file...\n";
   dataFile.open("demofile.txt", ios::out);  // Open for output
-  std::cout << "Now writing data to the file" << std::endl;
+  cout << "Now writing data to the file\n";
   dataFile << "John David\n";        // write line 1
   dataFile << "Spencer\n";        // write line 2
   dataFile << "Wilson\n";       // write line 3
