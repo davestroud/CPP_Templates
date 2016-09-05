@@ -1,6 +1,11 @@
 // Write a program that uses a structure to store the following weather data
 // for a particular month:
 
+// John David Stroud
+// CS-2255 
+// Programming Challenge 4. Weather Statistics
+
+
 //******************************************************************************
 // The program should also calculate the following:                            *
 //      Average monthly rainfall                                               *
@@ -199,7 +204,7 @@ double highestTemp(WeatherData data[], int size, int &month)
   return highest;
 }
 
-// The lowestTemp function accpets:
+// The lowestTemp function accepts:
 //  1. a WeatherData array
 //  2. an int indicating the size of the array
 //  3. an int by reference to hold the month with the
