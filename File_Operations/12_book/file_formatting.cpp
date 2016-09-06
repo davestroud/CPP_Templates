@@ -11,7 +11,7 @@ int main(int argc, char const *argv[]) {
 
   dataFile.open("numfile.txt", ios::out);   // Open in output mode
 
-    dataFile << fixed;                 // Format the fixed-point notation
+  dataFile << fixed;                 // Format the fixed-point notation
   dataFile << num << endl;             // Write the number
 
   dataFile << setprecision(4);          // Format for 4 decimal places
