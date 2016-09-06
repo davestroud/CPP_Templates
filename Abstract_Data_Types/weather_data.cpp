@@ -2,7 +2,7 @@
 // for a particular month:
 
 // John David Stroud
-// CS-2255 
+// CS-2255
 // Programming Challenge 4. Weather Statistics
 
 
