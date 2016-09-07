@@ -41,20 +41,20 @@ int main(int argc, char const *argv[]) {
   testFile >> num;
   cout << "The value " << num << " was read.\n";
 
+  // Show the bit states.
+  showState(testFile);
 
+  // No more data in the file, but force an invalid read operation.
+  cout << "Forcing a bad read operation.\n";
+  testFile >> num;
 
+  // Show the bit states.
+  showState(testFile);
+
+  // Close the file.
+  testFile.close();
   return 0;
 }
-
-
-
-
-
-
-
-
-
-
 
 //*******************************************************************
 // Definition of function showState.  This function uses            *
