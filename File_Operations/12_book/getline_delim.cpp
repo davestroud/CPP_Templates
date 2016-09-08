@@ -21,7 +21,7 @@ int main(int argc, char const *argv[]) {
     // was successful, continue.
     while (dataFile)
     {
-      // Display the last item rad.
+      // Display the last item read.
       cout << input << endl;
 
       // Read an item using $ as a delimiter.
