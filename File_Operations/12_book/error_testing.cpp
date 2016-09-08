@@ -1,5 +1,5 @@
 // This program demonstrates the return value of the stream
-// obect error testing member functions.
+// object error testing member functions.
 #include <iostream>
 #include <fstream>
 using namespace std;
