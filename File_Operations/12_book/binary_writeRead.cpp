@@ -21,7 +21,7 @@ int main(int argc, char const *argv[]) {
   // Open the file for input in binary mode
   file.open("test.dat", ios::in | ios::binary);
 
-  // Read the contents of the file into the arrary.
+  // Read the contents of the file into the array.
   cout << "Now reading the data back into memory.\n";
   file.read(data, sizeof(data));
 
