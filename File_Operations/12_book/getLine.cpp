@@ -10,7 +10,7 @@ int main(int argc, char const *argv[]) {
   fstream nameFile;       // File stream object
 
   // Open the file in input mode
-  nameFile.open("murphy.txt", ios::in);
+  nameFile.open("joke.txt", ios::in);
 
   // If the file was successfully opened, continue.
   if (nameFile)

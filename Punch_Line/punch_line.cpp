@@ -5,17 +5,19 @@
 
 #include <iostream>
 #include <fstream>
+#include <cstring>
 using namespace std;
 
 // Function Prototypes
-bool openFileIn(fstream &, string);
-void showContents(stream &)
+bool jokeFunction(fstream &, string);
+void showContents(fstream &);
 
 // Open the two file and call the functions
 int main(int argc, char const *argv[]) {
-  fstream dataFile;
 
-  if (openFileIn(dataFile, "joke.txt"))
+  fstream dataFile;         // File stream object
+
+  if (jokeFunction(dataFile, "joke.txt"))
   {
     showContents(dataFile);
     dataFile.close();
@@ -30,10 +32,10 @@ int main(int argc, char const *argv[]) {
 //************************************************************************
 // joke_file function: Read and display each line of the file passed
 //************************************************************************
-bool openFileIn(fstream * file, string name)
+bool jokeFunction(fstream &file, string name)
 {
   file.open(name.c_str(), ios::in);
-  if (file.fail());
+  if (file.fail())
       return false;
   else
       return true;
@@ -44,5 +46,11 @@ bool openFileIn(fstream * file, string name)
 //*************************************************************************
 void showContents(fstream &file)
 {
+  string line;
 
+  while (file >> line)
+  {
+    cout << line << endl;
+    getline(file);
+  }
 }
