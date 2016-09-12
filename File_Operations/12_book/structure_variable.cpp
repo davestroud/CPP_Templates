@@ -21,7 +21,7 @@ int main(int argc, char const *argv[]) {
   char again;     // To hold Y or N
 
   // Open a file for binary output.
-  fstream people("people.dat", ios:: out | binary);
+  fstream people("people.dat", ios:: out | ios::binary);
 
   do
   {
@@ -29,10 +29,28 @@ int main(int argc, char const *argv[]) {
     cout << "Enter the following data about a "
           << "person:\n";
     cout <<"Name: ";
-    cin.getline(person.name, NAME_SIZE)
-  }
+    cin.getline(person.name, NAME_SIZE);
+    cout << "Age: ";
+    cin >> person.age;
+    cin.ignore(); // Skip over the remaining newline
+    cout << "Address line 1: ";
+    cin.getline(person.address1, ADDR_SIZE);
+    cout << "Address line 2:";
+    cin.getline(person.address2, ADDR_SIZE);
+    cout << "Phone: ";
+    cin.getline(person.phone, PHONE_SIZE);
 
+    // Write the contents of the person structure to the file.
+    people.write(reinterpret_cast<char *>(&person),
+                sizeof(person));
 
+    // Determine whether the user wants to write another record.
+    cout << "Do you want to enter another record? ";
+    cin >> again;
+    cin.ignore();   // Skip over the remaining newline.
+  } while (again == 'Y' || again == 'y');
 
+  // Close the file
+  people.close();
   return 0;
 }
