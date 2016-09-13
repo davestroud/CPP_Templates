@@ -25,30 +25,26 @@ int main()
   readPunchline(file);
   file.close();
 
+
   return 0;
 }
-
-
-
 
 // Read_Joke function: Read and display each line of joke file
 void readJoke(fstream &file)
 {
-
   string fileName;
   while (getline(file, fileName))
   {
     cout << fileName << endl;
   }
-
 }
-
-
 
 // punchline_function: Read and display last line of punchline file
 void readPunchline(fstream &file)
 {
+
   string fileName2;
+  file.seekg(-37L, ios::end);
   while (getline(file, fileName2))
   {
     cout << fileName2 << endl;
