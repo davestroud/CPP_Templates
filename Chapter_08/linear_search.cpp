@@ -20,8 +20,7 @@ int main(int argc, char const *argv[]) {
   {
     // Otherwise results contains the subscript of
     // the first 100 in the array.
-    std::cout << "You earned 100 points on test " << std::endl;
-    std::cout << (results + 1) << std::endl;
+    std::cout << "You earned 100 points on test " << (results + 1) << std::endl;
   }
   return 0;
 }
