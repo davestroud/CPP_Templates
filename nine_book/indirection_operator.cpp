@@ -14,7 +14,7 @@ int main(int argc, char const *argv[]) {
 
   // Assign 100 to the location pointed to by ptr. This
   // will acctually assign 100 to x.
-  *ptr = 100;
+  *ptr = 100;   // Used to dereference pointer
 
   // Use x and ptr to display the value in x
   std::cout << "Once again, here is the value of x:" << std::endl;
