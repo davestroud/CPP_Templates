@@ -84,7 +84,7 @@ int main()
    cout << "What is the kitchen's width? ";
    cin >> number;							// Get the width
    kitchen->setWidth(number);               // Store in kitchen object
-   
+
    // Get the bedroom dimensions.
    cout << "What is the bedroom's length? ";
    cin >> number;							// Get the length
@@ -100,14 +100,14 @@ int main()
    cout << "What is the den's width? ";
    cin >> number;							// Get the width
    den->setWidth(number);					// Store in den object
-   
+
    // Calculate the total area of the three rooms.
    totalArea = kitchen->getArea() + bedroom->getArea() +
                den->getArea();
-   
+
    // Display the total area of the three rooms.
    cout << "The total area of the three rooms is "
         << totalArea << endl;
-   
+
    return 0;
-} 
+}
