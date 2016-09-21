@@ -56,7 +56,7 @@ double Rectangle::getLength() const
 // getArea returns the product of width times length.        *
 //************************************************************
 
-double Rectangle::getArea()
+double Rectangle::getArea() const
 {
   return width * length;
 }
