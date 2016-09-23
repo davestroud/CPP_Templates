@@ -11,6 +11,21 @@ private:
   string position;
 
 public:
+  // Constructors
+  Employee(string, int, string, string);
+  Employee(string, int);
+  Employee();
 
+  // Mutators
+  void setName(string);
+  void setIdNumber(int);
+  void setDepartment(string);
+  void setPosition(string);
 
-}
+  // Accessors
+  string getName() const;
+  int getIdNumber() const;
+  string getDeparment() const;
+  string getPosition() const;
+};
+#endif
