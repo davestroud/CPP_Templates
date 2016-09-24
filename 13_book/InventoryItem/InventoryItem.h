@@ -22,11 +22,11 @@ public:
    InventoryItem(string desc)
       { // Assign the value to description.
         description = desc;
-        
+
         // Initialize cost and units.
         cost = 0.0;
         units = 0; }
-        
+
    // Constructor #3
    InventoryItem(string desc, double c, int u)
       { // Assign values to description, cost, and units.
@@ -34,20 +34,20 @@ public:
         cost = c;
         units = u; }
 
-   // Mutator functions
-   void setDescription(string d) 
+   // Mutator, or setter functions
+   void setDescription(string d)
       { description = d; }
 
    void setCost(double c)
       { cost = c; }
-      
+
    void setUnits(int u)
       { units = u; }
 
-   // Accessor functions
+   // Accessor, or getter functions
    string getDescription() const
       { return description; }
-         
+
    double getCost() const
       { return cost; }
 
