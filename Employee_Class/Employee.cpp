@@ -24,3 +24,30 @@ Employee::Employee()
   department = "";
   position = "";
 }
+
+// Mutator, or setter functions
+void Employee::setName(string n)
+  { name = n; }
+
+void Employee::setIdNumber(int id)
+  { idNumber = id; }
+
+void Employee::setDepartment(string dept)
+  { department = dept; }
+
+void Employee::setPosition(string pos)
+  { position = pos; }
+
+
+// Accessor, or getter functions
+string Employee::getName() const
+  { return name;}
+
+int Employee::getIdNumber() const
+  { return idNumber; }
+
+string Employee::getDeparment() const
+  { return department;}
+
+string Employee::getPosition() const
+  { return position; }
