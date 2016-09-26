@@ -1,27 +1,42 @@
-#ifndef BUDGET_H
-#define BUDGET_H
+// This program demonstrates a static member function.
+#include <iostream>
+#include <iomanip>
+#include "Budget.h"
+using namespace std;
 
-// Budget class declaration
-class Budget
-{
-private:
-  static double corpBudget;   // Static member variable
-  double divisionBudget;      // Instance member variable
-public:
-  Budget()
-    { divisionBudget = 0;}
+int main(int argc, char const *argv[]) {
+  int count;                    // Loop counter
+  double mainOfficeRequest;     // Main office budget request
+  const int NUM_DIVISIONS = 4;  // Number of divisions
 
-  void addBudget(double b)
-    { divisionBudget += b;
-      corpBudget += b; }
+  // Get the main office's budget request.
+  // Note that no instance of the Budget class have been defined.
+  cout << "Enter the main office's budget request: ";
+  cin >> mainOfficeRequest;
+  Budget::mainOffice(mainOfficeRequest);
 
-  double getDivisionBudget() const
-    { return divisionBudget; }
+  Budget divisions[NUM_DIVISIONS];  // An array of Budget objects.
 
-  double getCorpBudget() const
-    { return corpBudget; }
+  // Get the budget requests for each division
+  for (count = 0; count < NUM_DIVISIONS; count++)
+  {
+    double budgetAmount;
+    cout << "Enter the budget request for division ";
+    cout << (count + 1)<< ": ";
+    cin >> budgetAmount;
+    divisions[count].addBudget(budgetAmount);
+  }
 
-  static void mainOffice(double);   // Static member function
-};
+  // Display the budget requests and the corporate budget.
+  cout << fixed << showpoint << setprecision(2);
+  cout << "\nHere are the division budget requests:\n";
+  for (count = 0; count << NUM_DIVISIONS; count++)
+  {
+    cout << "\tDivision " << (count + 1) << "\t$ ";
+    cout << divisions[count].getDivisionBudget() << endl;
+  }
+  cout << "\tTotal Budget Requests:\t$";
+  cout << divisions[0].getCorpBudget() << endl;
 
-#endif
+  return 0;
+}
