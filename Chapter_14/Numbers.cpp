@@ -5,17 +5,27 @@ using namespace std;
 class Numbers
 {
 private:
+  int number;
 
 public:
-  static string lessThan20 = {"zero", "one", "two", "three",
-                              "four", "five", "six", "seven",
-                              "eight", "nine", "ten", "eleven",
-                              "twelve", "thirteen", "fourteen",
-                              "fifteen", "sixteen", "seventeen",
-                              "eighteen", "nineteen" };
-  void print()
+  static string lessThan20
+
+
+
+
+  string Numbers::lessThan20 [] = {"zero", "one", "two", "three",
+                        "four", "five", "six", "seven",
+                        "eight", "nine", "ten", "eleven",
+                        "twelve", "thirteen", "fourteen",
+                        "fifteen", "sixteen", "seventeen",
+                        "eighteen", "nineteen" };
+
 };
 
+//******************************************
+//          Numbers::print.                *
+// Translate and print Numbers to English  *
+//******************************************
 void Numbers::print()
 {
 
