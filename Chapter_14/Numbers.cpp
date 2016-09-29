@@ -10,6 +10,7 @@ private:
 public:
   static string lessThan20;
   void print();
+  void setNumber(int number) // Should I put {this->number = number;} Why?
 
 
 
