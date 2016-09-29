@@ -8,7 +8,8 @@ private:
   int number;
 
 public:
-  static string lessThan20
+  static string lessThan20;
+  void print();
 
 
 
@@ -46,4 +47,12 @@ int main()
   // Get the number as input from the user
   cout << "\nEnter an amount to be translated into words:(0-9999) ";
   cin >> number;
+
+  // Set the number
+  numbersObj.setNumber(number);
+
+  // Display the object.
+  numbersObj.print()
+
+  return 0;
 }
