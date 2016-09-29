@@ -9,6 +9,7 @@ private:
 
 public:
   static string lessThan20;
+  static string tens;
   static string hundred;  // Does this string need to be static? Why?
   static string thousand; // Does this string need to be static? Why?
   void print();
@@ -22,8 +23,12 @@ public:
                         "fifteen", "sixteen", "seventeen",
                         "eighteen", "nineteen" };
 
-  string hundred = "hundred";
-  string thousand = "thousand";
+  string Numbers::tens [] = {"ten", "twenty", "thirty",
+                              "forty","fifty", "sixty",
+                              "seventy", "eighty","ninety"}
+
+  string Numbers::hundred = "hundred";
+  string Numbers::thousand = "thousand";
 
 
 //******************************************
