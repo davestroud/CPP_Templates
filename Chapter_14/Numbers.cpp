@@ -9,8 +9,10 @@ private:
 
 public:
   static string lessThan20;
+  static string hundred;  // Does this string need to be static? Why?
+  static string thousand; // Does this string need to be static? Why?
   void print();
-  void setNumber(int number) // Should I put {this->number = number;} Why?
+  void setNumber(int number); // Should I put {this->number = number;} Why?
 
 
 
@@ -21,6 +23,10 @@ public:
                         "twelve", "thirteen", "fourteen",
                         "fifteen", "sixteen", "seventeen",
                         "eighteen", "nineteen" };
+
+  string hundred = "hundred";
+  string thousand = "thousand";
+
 
 };
 
@@ -53,7 +59,7 @@ int main()
   numbersObj.setNumber(number);
 
   // Display the object.
-  numbersObj.print()
+  numbersObj.print();
 
   return 0;
 }
