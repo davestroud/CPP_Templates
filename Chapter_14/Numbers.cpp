@@ -13,9 +13,7 @@ public:
   static string thousand; // Does this string need to be static? Why?
   void print();
   void setNumber(int number); // Should I put {this->number = number;} Why?
-
-
-
+};
 
   string Numbers::lessThan20 [] = {"zero", "one", "two", "three",
                         "four", "five", "six", "seven",
@@ -27,8 +25,6 @@ public:
   string hundred = "hundred";
   string thousand = "thousand";
 
-
-};
 
 //******************************************
 //          Numbers::print.                *
