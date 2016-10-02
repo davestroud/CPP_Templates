@@ -13,7 +13,7 @@ public:
   static string hundred;  // Does this string need to be static? Why?
   static string thousand; // Does this string need to be static? Why?
   void print();
-  void setNumber(int number); // Should I put {this->number = number;} Why?
+  void setNumber(int number){this->number = number;} // Should I put {this->number = number;} Why?
 };
 
   string Numbers::lessThan20 [] = {"zero", "one", "two", "three",
