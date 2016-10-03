@@ -38,8 +38,33 @@ public:
 //******************************************
 void Numbers::print()
 {
-  if (number >= 0 && number < 20)
-      cout << lessThan20[number];
+  int th = (number % 10000) / 1000; // Get thousandth number
+    int hd = (number % 1000) / 100;   // Get hundredth number
+    int tn = (number % 100) / 10;     // Get tenth number
+    int ones = number % 10;           // Get the ones number
+
+
+    if (th >= 1 && th <= 9) // One thousand through nine thousand
+        cout << lessThan20[th] << " " << thousand << " ";
+    else if (th == 0)       // Less than one thousand
+        cout << "";
+
+    if (hd >= 1 && hd <= 9) // One hundred through nine hundred
+        cout << lessThan20[hd] << " " << hundred << " ";
+    else if (hd == 0)       // Less then one hundred
+        cout << "";
+
+    if (tn == 1) // Ten through nineteen
+        cout << lessThan20[number % 100] << " " ;
+    else if (tn >= 2 && tn <= 9)  // Number = twenty through ninety nine
+        cout << lessThan20[tn + 18] << " ";
+    else if (tn == 0) // Less than ten
+        cout << "";
+
+    if (number % 10 == 0) // Don't display ones when number = 20,30,40.....9000
+        cout << "";
+    else
+        cout << lessThan20[ones];
 
 
 
