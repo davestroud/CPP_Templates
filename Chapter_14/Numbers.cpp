@@ -42,7 +42,7 @@ void Numbers::print()
 
 int main()
 {
-  // Create an instace of Numbers class
+  // Create an instance of Numbers class
   Numbers numbersObj;   // Is it necessary to put the obj?  If so, why
 
   int number;       // To hold the number
