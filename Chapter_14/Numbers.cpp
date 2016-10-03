@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 using namespace std;
 
 class Numbers
@@ -37,7 +38,11 @@ public:
 //******************************************
 void Numbers::print()
 {
-  int number = 0;
+  if (number >= 0 && number < 20)
+      cout << lessThan20[number];
+
+
+
 }
 
 int main()
