@@ -16,14 +16,14 @@ public:
    GradedActivity(double s)
       { score = s; }
 
-   // Mutator function
-   void setScore(double s) 
+   // Mutator function, setter
+   void setScore(double s)
       { score = s; }
-   
-   // Accessor functions
+
+   // Accessor functions, getters
    double getScore() const
       { return score; }
-   
+
    char getLetterGrade() const;
 };
 #endif 
