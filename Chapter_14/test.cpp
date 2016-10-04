@@ -24,10 +24,6 @@ public:
                         "fifteen", "sixteen", "seventeen",
                         "eighteen", "nineteen" };
 
-  string Numbers::tens [] = {"ten", "twenty", "thirty",
-                              "forty","fifty", "sixty",
-                              "seventy", "eighty","ninety"};
-
   string Numbers::hundred = "hundred";
   string Numbers::thousand = "thousand";
 
@@ -54,7 +50,7 @@ void Numbers::print()
       cout << "";
 
 
-  
+
 }
 
 int main()

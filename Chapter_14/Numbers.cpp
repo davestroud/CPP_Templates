@@ -22,7 +22,9 @@ public:
                         "eight", "nine", "ten", "eleven",
                         "twelve", "thirteen", "fourteen",
                         "fifteen", "sixteen", "seventeen",
-                        "eighteen", "nineteen" };
+                        "eighteen", "nineteen",
+                        "twenty", "thirty", "forty", "fifty",
+                        "sixty", "seventy", "eighty", "ninety" };
 
   string Numbers::hundred = "hundred";
   string Numbers::thousand = "thousand";
@@ -61,9 +63,6 @@ void Numbers::print()
         cout << "";
     else
         cout << lessThan20[ones];
-
-
-
 }
 
 int main()
