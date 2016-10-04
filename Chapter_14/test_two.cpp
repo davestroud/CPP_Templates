@@ -1,155 +1,89 @@
-/*
-917
-1. Numbers Class
-Design a class Numbers that can be used to translate whole dollar amounts
-in the range 0 through 9999 into an English description of the number.
-For example, the number 713 would be translated into the string seven hundred thirteen,
-and 8203 would be translated into eight thousand two hundred three.
-*/
+// Tommy Nguyen
+// Programming Challenge 14-1
+// This program takes an integer entered by the user and translate it to written form.
 
 #include <iostream>
-#include <string>
+
 using namespace std;
 
 class Numbers
 {
-private:
-	int number;
+    private:
+    int number;
+    static string stringArray[];
+    static string hundred;
+    static string thousand;
 
-	static const string lessThan20[20];
-	static const string greaterThan19[8];
-	static const string hundred;
-	static const string thousand;
+    public:
+    Numbers();
+    Numbers(int);
 
-public:
-	//cosntructor
-	Numbers();
-	Numbers(int num)
-	{
-		setNumber(num);
-	}
-
-	void setNumber(int num)
-		{number = num;}
-
-	void print();
-
+    void print();
 };
 
-// Static member variables must be defined outside of the class
-const string Numbers::lessThan20[20] =	{"zero", "one" , "two", "three", "four", "five",
-										"six", "seven", "eight", "nine", "ten", "eleven",
-										"twelve", "thirteen", "fourteen", "fifteen",
-										"sixteen", "seventeen", "eighteen", "nineteen"};
-
-const string Numbers::greaterThan19[8] =	{"twenty", "thirty", "forty", "fifty", "sixty",
-											"seventy", "eighty", "ninety"};
-
-const string Numbers::hundred = "hundred";
-const string Numbers::thousand = "thousand";
-
-//print function
-void Numbers::print()
-{
-	int firstNum;
-	int secondNum;
-
-
-	if (number >= 0 && number < 20)  //executes pefectly
-	{
-		cout << lessThan20[number]<< " dollars";
-	}
-	else if (number >= 20 && number < 100) //2 digit numbers, > 20
-	{
-		if (number / 10 == 2)
-		{
-			secondNum = number - (2 * 10);
-			cout <<  greaterThan19[0] << " " << lessThan20[secondNum] << " dollars";
-		}
-		else if (number / 10 == 3)
-		{
-			secondNum = number - (3 * 10);
-			cout <<  greaterThan19[1] << " " << lessThan20[secondNum] << " dollars";
-		}
-		else if (number / 10 == 4)
-		{
-			secondNum = number - (4 * 10);
-			cout <<  greaterThan19[2] << " " << lessThan20[secondNum] << " dollars";
-		}
-		else if (number / 10 == 5)
-		{
-			secondNum = number - (5 * 10);
-			cout <<  greaterThan19[3] << " " << lessThan20[secondNum] << " dollars";
-		}
-		else if (number / 10 == 6)
-		{
-			secondNum = number - (6 * 10);
-			cout <<  greaterThan19[4] << " " << lessThan20[secondNum] << " dollars";
-		}
-		else if (number / 10 == 7)
-		{
-			secondNum = number - (7 * 10);
-			cout <<  greaterThan19[5] << " " << lessThan20[secondNum] << " dollars";
-		}
-		else if (number / 10 == 8)
-		{
-			secondNum = number - (8 * 10);
-			cout <<  greaterThan19[6] << " " << lessThan20[secondNum] << " dollars";
-		}
-		else
-		{
-			secondNum = number - (9 * 10);
-			cout <<  greaterThan19[7] << " " << lessThan20[secondNum] << " dollars";
-		}
-
-		//check 1st digit of 2 digit number, and assign it int firstNum
-		//check 2nd digit & assign it to, int secondNum
-
-		//cout <<  greaterThan19[firstNum] << lessThan20[secondNum]<< " dollar";
-	}
-	else if (number >= 100 && number < 1000) //3 digit numbers, < 1000
-	{
-		//if statement checks if last 2 digits are less than 20
-			//check 1st digit of 3 digit number, and assign it int firstNum
-			//check 2nd & 3rd digit, assign it to, int secondNum
-			//cout << greaterThan19[firstNum] << " " << lessThan20[secondNum]<< " dollar";
-
-		//else works with last 2 digits greater than 19
-			//check 1st digit of 3 digit number, and assign it int firstNum
-			//check 2nd digit, assign it to, int secondNum
-			//check 3rd digit & assign it to, int thirdNum
-			//cout << greaterThan19[firstNum] << " " << lessThan20[secondNum] << " " <<  lessThan20thirdNum] << dollar";
-	}
-	else //(number >= 1000 && number < 10000)  //4 digit numbers, > 20
-	{
-		//cout << lessThan20[number]<< " dollar";
-	}
-}
-
+string Numbers::stringArray[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+                                "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+                                "seventeen", "eighteen", "nineteen",
+                                "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+string Numbers::hundred = "hundred";
+string Numbers::thousand = "thousand";
 
 int main()
 {
-	int input;
-	//Numbers numObject;
+    int input;
 
-	cout << "Enter a dollar amount from 0 to 9999: ";
-	cin >> input;
+    while(true){
+    cout << "Enter a positive number between 0 and 9999 to translate: ";
+    cin >> input;
 
-	while (input >= 0 && input <= 9999)
-	{
-		Numbers numObject(input);	//pass user input to constructor
-		numObject.print();
+    // Loop if the user input is out of range
+    while (input < 0 || input > 9999) {
+        cout << "Invalid. " << endl;
+        cout << "Enter a positive number between 0 and 9999 to translate: ";
+        cin >> input;
+    }
 
-		cout << endl << endl;
+    Numbers num(input);
 
-		cout << "Enter another amount, or a value less than" << endl;
-		cout << "0 or greater than 9999 to quit: ";
-		cin >> input;
-	}
+    num.print();
+    cout << endl;
 
-	cout << "You're finished";
-	cout << endl;
+    } // Ends first while loop
 
-	system("pause");
-	return 0;
+    return 0;
+}
+
+Numbers::Numbers(int num) {
+    number = num;
+ }
+
+void Numbers::print() {
+
+    int th = (number % 10000) / 1000; // Get thousandth number
+    int hd = (number % 1000) / 100;   // Get hundredth number
+    int tn = (number % 100) / 10;     // Get tenth number
+    int ones = number % 10;           // Get the ones number
+
+
+    if (th >= 1 && th <= 9) // One thousand through nine thousand
+        cout << stringArray[th] << " " << thousand << " ";
+    else if (th == 0)       // Less than one thousand
+        cout << "";
+
+    if (hd >= 1 && hd <= 9) // One hundred through nine hundred
+        cout << stringArray[hd] << " " << hundred << " ";
+    else if (hd == 0)       // Less then one hundred
+        cout << "";
+
+    if (tn == 1) // Ten through nineteen
+        cout << stringArray[number % 100] << " " ;
+    else if (tn >= 2 && tn <= 9)  // Number = twenty through ninety nine
+        cout << stringArray[tn + 18] << " ";
+    else if (tn == 0) // Less than ten
+        cout << "";
+
+    if (number % 10 == 0) // Don't display ones when number = 20,30,40.....9000
+        cout << "";
+    else
+        cout << stringArray[ones];
 }
