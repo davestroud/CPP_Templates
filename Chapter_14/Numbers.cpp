@@ -11,10 +11,10 @@ private:
 public:
   static string lessThan20[];
   static string tens[];
-  static string hundred;  // Does this string need to be static? Why?
-  static string thousand; // Does this string need to be static? Why?
+  static string hundred;
+  static string thousand;
   void print();
-  void setNumber(int number){this->number = number;} // Should I put {this->number = number;} Why?
+  void setNumber(int number){this->number = number;}
 };
 
   string Numbers::lessThan20 [] = {"zero", "one", "two", "three",
@@ -68,8 +68,9 @@ void Numbers::print()
 int main()
 {
   // Create an instance of Numbers class
-  Numbers numbersObj;   // Is it necessary to put the obj?  If so, why
+  Numbers numbersObj;
 
+  while(true) {
   int number;       // To hold the number
 
   // Display the purpose of the program
@@ -80,11 +81,19 @@ int main()
   cout << "\nEnter an amount to be translated into words:(0-9999) ";
   cin >> number;
 
+  while (number < 0 || number > 9999){
+    cout << "You entered an Invalid number:" << endl;
+    cout << "Please enter a number between 0 and 9999: ";
+    cin >> number;
+  }
+
   // Set the number
   numbersObj.setNumber(number);
 
   // Display the object.
   numbersObj.print();
+  cout << endl << endl;
+}
 
   return 0;
 }

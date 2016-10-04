@@ -49,7 +49,17 @@ void Numbers::print()
   else if (hd == 0)
       cout << "";
 
+  if (tn == 1)
+    cout << lessThan20[number % 100] << " ";
+  else if (tn >= 2 && tn <= 9)
+    cout << lessThan20[tn + 18] << " ";
+  else if (tn == 0) // Less than ten
+  cout << "";
 
+  if (number % 10 == 0)
+    cout << "";
+  else
+    cout << lessThan20[ones];
 
 }
 
