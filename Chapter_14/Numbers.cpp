@@ -24,10 +24,6 @@ public:
                         "fifteen", "sixteen", "seventeen",
                         "eighteen", "nineteen" };
 
-  string Numbers::tens [] = {"ten", "twenty", "thirty",
-                              "forty","fifty", "sixty",
-                              "seventy", "eighty","ninety"};
-
   string Numbers::hundred = "hundred";
   string Numbers::thousand = "thousand";
 
@@ -84,14 +80,6 @@ int main()
   // Get the number as input from the user
   cout << "\nEnter an amount to be translated into words:(0-9999) ";
   cin >> number;
-
-  // While loop used if the user enter a number
-  // greater than 9999 or less than 0
-  while (number < 0 || number < 9999){
-    cout << "You entered an invalid number" << endl;
-    cout << "Enter a number between 0 and 9999: ";
-    cin number;
-  }
 
   // Set the number
   numbersObj.setNumber(number);

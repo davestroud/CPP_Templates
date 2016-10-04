@@ -40,9 +40,21 @@ void Numbers::print()
 {
   int th = (number % 10000) / 1000;   // Get the thousandth number
   int hd = (number % 1000) / 100;     // Get the hundredth number
+  int tn = (number % 100) / 10;       // Get the tenth number
+  int ones = (number % 10) / 10;      // Get the ones
 
   if (th >= 1 && th <= 9) // One thousand through nine thousand
       cout << lessThan20[th] << " " << thousand << " ";
+  else if (th == 0)
+      cout << "";
+
+  if (hd >= 1 && hd <= 9)
+      cout << lessThan20[hd] << " " << hundred << " ";
+  else if (hd == 0)
+      cout << "";
+
+
+  
 }
 
 int main()
