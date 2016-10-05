@@ -13,7 +13,7 @@ int main(int argc, char const *argv[]) {
   cout << "Enter your numeric test score: ";
   cin >> testScore;
 
-  // Store the numer score in the test object.
+  // Store the number score in the test object.
   test.setScore(testScore);
 
   // Display the letter grade for the test.
