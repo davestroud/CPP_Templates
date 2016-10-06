@@ -7,7 +7,7 @@
 char GradedActivity::getLetterGrade() const
 {
    char letterGrade; // To hold the letter grade
-   
+
    if (score > 89)
       letterGrade = 'A';
    else if (score > 79)
@@ -18,6 +18,6 @@ char GradedActivity::getLetterGrade() const
       letterGrade = 'D';
    else
       letterGrade = 'F';
-   
+
    return letterGrade;
-}
+} 
