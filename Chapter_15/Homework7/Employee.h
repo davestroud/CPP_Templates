@@ -5,13 +5,36 @@
 class Employee
 {
 private:
-  string EmployeeName;
-  int EmployeeNumber;
-  string HireDate;
-}
+  string employeeName;
+  int employeeNumber;
+  string hireDate;
 public:
-  Employee(string name, int numbers, string hDate)
+  // Constructor
+  Employee(string name, int number, string hDate)
+  {
+    employeeName = name;
+    employeeNumber = number;
+    hireDate = hDate
+  }
 
+  // Mutators
   void setEmployeeName(string name)
+  { employeeName = name; }
+
   void setEmployeeNumber(int number)
+  { employeeNumber = number; }
+
   void setHireDate(string hDate)
+  { hireDate = hDate; }
+
+  // Accessors
+  string getEmployeeName()
+  { return employeeName; }
+
+  int getEmployeeNumber()
+  { return employeeNumber; }
+
+  string setHireDate()
+  { return hireDate; }
+};
+#endif
