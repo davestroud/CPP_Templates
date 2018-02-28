@@ -5,11 +5,11 @@ class ProductionWorker : public Employee
 {
 private:
   int shift;
-  double hourlyPayRate
+  double hourlyPayRate;
 public:
   // Constructor
   ProductionWorker(string name, int number, string hDate,
-    int shiftNum, double payRate) : Employee(name, number, hdate)
+    int shiftNum, double payRate) : Employee(name, number, hDate)
     {   shift = shiftNum;
         hourlyPayRate = payRate;
     }

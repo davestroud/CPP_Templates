@@ -8,21 +8,19 @@ using namespace std;
 // The constructor sets each element to zero.               *
 //***********************************************************
 
-IntegerList::IntegerList(int size)
-{ 
-   list = new int[size];
-   numElements = size;
-   for (int ndx = 0; ndx < size; ndx++)
-      list[ndx] = 0;
+IntegerList::IntegerList(int size) {
+	list = new int[size];
+	numElements = size;
+	for (int ndx = 0; ndx < size; ndx++)
+		list[ndx] = 0;
 }
 
 //***********************************************************
 // The destructor releases allocated memory.                *
 //***********************************************************
 
-IntegerList::~IntegerList()
-{ 
-   delete [] list;
+IntegerList::~IntegerList() {
+	delete[] list;
 }
 
 //***********************************************************
@@ -31,15 +29,14 @@ IntegerList::~IntegerList()
 // is a valid subscript, or false otherwise.                *
 //***********************************************************
 
-bool IntegerList::isValid(int element) const
-{
-   bool status;
+bool IntegerList::isValid(int element) const {
+	bool status;
 
-   if (element < 0 || element >= numElements)
-      status = false;
-   else
-      status = true;
-   return status;
+	if (element < 0 || element >= numElements)
+		status = false;
+	else
+		status = true;
+	return status;
 }
 
 //***********************************************************
@@ -48,15 +45,13 @@ bool IntegerList::isValid(int element) const
 // invalid subscript is passed, the program aborts.         *
 //***********************************************************
 
-void IntegerList::setElement(int element, int value)
-{
-   if (isValid(element))
-      list[element] = value;
-   else
-   {
-      cout << "Error: Invalid subscript\n";
-      exit(EXIT_FAILURE);
-   }
+void IntegerList::setElement(int element, int value) {
+	if (isValid(element))
+		list[element] = value;
+	else {
+		cout << "Error: Invalid subscript\n";
+		exit(EXIT_FAILURE);
+	}
 }
 
 //***********************************************************
@@ -65,13 +60,11 @@ void IntegerList::setElement(int element, int value)
 // If an invalid subscript is passed, the program aborts.   *
 //***********************************************************
 
-int IntegerList::getElement(int element) const
-{
-   if (isValid(element))
-      return list[element];
-   else
-   {
-      cout << "Error: Invalid subscript\n";
-      exit(EXIT_FAILURE);
-   }
+int IntegerList::getElement(int element) const {
+	if (isValid(element))
+		return list[element];
+	else {
+		cout << "Error: Invalid subscript\n";
+		exit(EXIT_FAILURE);
+	}
 }
